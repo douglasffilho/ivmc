@@ -1,4 +1,4 @@
-# Template Next.js
+# IVMC
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
@@ -6,7 +6,7 @@
 
 ### 📚 Description
 
-Next.js template - JavaScript version. (TS version soon)
+Site do Instituto Vozes da Minha Cabeça
 
 ### 🔗 URLs
 
@@ -24,17 +24,17 @@ CI/CD tool link.
 
 ```bash
 # download dependencies
-$ npm install
+$ yarn
 ```
 
 ### 🏃 Running the app
 
 ```bash
 # development
-$ npm run dev
+$ yarn dev
 
 # build
-$ npm run build
+$ yarn build
 
 ```
 
@@ -42,10 +42,10 @@ $ npm run build
 
 ```bash
 # unit tests
-$ npm test
+$ yarn test
 
 # open coverage
-$ npm run coverage
+$ yarn coverage
 
 ```
 

@@ -1,6 +1,6 @@
-export const Logo = ({ text }) => {
+export const Logo = ({ text, title = '' }) => {
   return (
-    <div className="Logo">
+    <div className="Logo" title={title}>
       <a href="/" target="_self">
         {text}
       </a>

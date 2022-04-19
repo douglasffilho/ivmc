@@ -1,51 +1,59 @@
 import { Footer, Header, Icon, Logo } from 'components';
 import Head from 'next/head';
 
+import { A, P } from '../StyledHtml';
+
 export const PageTemplate = ({ children }) => {
   return (
     <div className="PageTemplate">
       <Head>
-        <title>Devgram</title>
+        <title>IVMC</title>
       </Head>
       <Header>
-        <Logo text="Devgram" />
+        <Logo text="IVMC" title="Instituto Vozes da Minha Cabeça" />
         <div className="remove-843" />
         <div className="Icons container small">
           <Icon title="Página Inicial" link="/" icon="home" />
 
           <Icon
             title="Fale Comigo"
-            link="https://wa.me/5581986778644?text=Olá"
+            link="https://wa.me/5581986778644?text=Olá, eu também ouço vozes..."
             openInNewTab="true"
             icon="chat"
           />
 
           <Icon
-            title="Me acompanhe no LinkedIn"
-            link="https://www.linkedin.com/in/douglas-fernandes-4175a585/"
+            title="Olha como me achar"
+            link="https://www.instagram.com/shadllarossine/"
             openInNewTab="true"
             icon="explore"
           />
 
           <Icon
-            title="Me acompanhe no Github"
-            link="https://github.com/douglasffilho"
+            title="Curte meu perfil aew"
+            link="https://www.instagram.com/shadllarossine/"
             openInNewTab="true"
             icon="like"
           />
 
           <Icon
-            title="Me acha aew"
-            link="https://www.google.com.br/search?q=Douglas+Fernandes+da+Silva+Filho"
+            title="E aew"
+            link="https://www.instagram.com/shadllarossine/"
             openInNewTab="true"
           >
-            <p className="icon-text">Me Acha Aew</p>
+            <P fontSize={0.5}>E aew!</P>
           </Icon>
         </div>
       </Header>
       <main>{children}</main>
       <Footer>
-        <p>Developed by Douglas Filho</p>
+        <A
+          linkTo="https://github.com/douglasffilho"
+          openInNewTab={true}
+          fontSize={0.5}
+        >
+          Developed by Douglas Filho
+        </A>
       </Footer>
       <style jsx="true">{`
         .PageTemplate {
@@ -57,10 +65,6 @@ export const PageTemplate = ({ children }) => {
         .PageTemplate .Icons {
           grid-template-columns: repeat(auto-fit, 8.5%);
           height: 1rem;
-        }
-
-        .PageTemplate .Icons .icon-text {
-          font-size: 0.6rem;
         }
       `}</style>
     </div>
