@@ -6,18 +6,17 @@ import { A, P } from '../StyledHtml';
 const seo = {
   author: 'Douglas Filho',
   title: 'IVMC',
+  canonical: 'https://ivmc.com.br',
   description:
     'Um lugar pra encontrar opinões fortemente embasadas e pautas nas multiplas vozes geniais da minha cabecinha.',
   keywords:
     'IVMC,instituto vozes da minha cabeça,instituto,vozes,da,minha,cabeça',
-  type: 'article',
-  og: {
-    image:
-      'https://instagram.frec5-1.fna.fbcdn.net/v/t51.2885-15/275589808_1303287863502906_3511132225815790177_n.webp?stp=dst-jpg_e35_p480x480&_nc_ht=instagram.frec5-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=fMGnqBli_YYAX9y82P7&edm=ALQROFkBAAAA&ccb=7-4&ig_cache_key=Mjc5MTAxNDgzODI0MDczMzc1OQ%3D%3D.2-ccb7-4&oh=00_AT-DjYW-rBmbcHRu2RdX_-WastcbJmC3vlRrk6Czj3kpdA&oe=6266B484&_nc_sid=30a2ef',
-    url: 'https://www.instagram.com/shadllarossine/',
-  },
+  type: 'website',
+  image:
+    'https://instagram.frec5-1.fna.fbcdn.net/v/t51.2885-15/275589808_1303287863502906_3511132225815790177_n.webp?stp=dst-jpg_e35_p480x480&_nc_ht=instagram.frec5-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=fMGnqBli_YYAX9y82P7&edm=ALQROFkBAAAA&ccb=7-4&ig_cache_key=Mjc5MTAxNDgzODI0MDczMzc1OQ%3D%3D.2-ccb7-4&oh=00_AT-DjYW-rBmbcHRu2RdX_-WastcbJmC3vlRrk6Czj3kpdA&oe=6266B484&_nc_sid=30a2ef',
   twitter: {
-    type: 'summary',
+    type: 'summary_large_image',
+    domain: 'ivmc.com.br',
     author: '@douglasffilho',
   },
 };
@@ -27,7 +26,7 @@ export const PageTemplate = ({ children }) => {
     <div className="PageTemplate">
       <Head>
         <title>{seo.title}</title>
-        <link rel="canonical" href="https://ivmc.com.br" />
+        <link rel="canonical" href={seo.canonical} />
 
         <meta name="author" content={seo.author} />
         <meta name="description" content={seo.description} />
@@ -41,18 +40,17 @@ export const PageTemplate = ({ children }) => {
         <meta property="og:title" content={seo.title} />
         <meta property="og:description" content={seo.description} />
         <meta property="og:site_name" content={seo.title} />
-        <meta property="og:url" content={seo.og.url} />
-        <meta property="og:image" content={seo.og.image} />
-        {/* <meta property="og:image:type" content={seo.og.imageType} />
-        <meta property="og:image:width" content={seo.og.width} />
-        <meta property="og:image:height" content={seo.og.height} /> */}
+        <meta property="og:url" content={seo.canonical} />
+        <meta property="og:image" content={seo.image} />
 
         <meta name="twitter:card" content={seo.twitter.type} />
+        <meta property="twitter:domain" content={seo.twitter.domain} />
+        <meta property="twitter:url" content={seo.canonical} />
         <meta name="twitter:site" content={seo.twitter.author} />
         <meta name="twitter:creator" content={seo.twitter.author} />
         <meta name="twitter:title" content={seo.title} />
         <meta name="twitter:description" content={seo.description} />
-        <meta name="twitter:image" content={seo.og.image} />
+        <meta name="twitter:image" content={seo.image} />
       </Head>
       <Header>
         <Logo text="IVMC" title="Instituto Vozes da Minha Cabeça" />
