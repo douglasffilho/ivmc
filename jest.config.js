@@ -11,7 +11,7 @@ const customJestConfig = {
     '^components/(.*)$': '<rootDir>/src/components/$1',
     '^pages$': '<rootDir>/src/pages',
     '^pages/(.*)$': '<rootDir>/src/pages/$1',
-    '^svg$': '<rootDir>/src/svg',
+    '^svg$': '<rootDir>/src/tests/svg',
   },
   testEnvironment: 'jest-environment-jsdom',
 };

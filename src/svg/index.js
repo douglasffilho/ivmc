@@ -5,7 +5,8 @@ import Like from './Like.svg';
 
 const Empty = () => <div>empty</div>;
 
-export const ChatIcon = Chat?.name !== 'SvgChat' ? Empty : Chat;
-export const HomeIcon = Home?.name !== 'SvgHome' ? Empty : Home;
-export const ExploreIcon = Explore?.name !== 'SvgExplore' ? Empty : Explore;
-export const LikeIcon = Like?.name !== 'SvgLike' ? Empty : Like;
+export const ChatIcon = Chat;
+export const HomeIcon = Home;
+export const ExploreIcon = Explore;
+export const LikeIcon = Like;
+export const EmptyIcon = Empty;
