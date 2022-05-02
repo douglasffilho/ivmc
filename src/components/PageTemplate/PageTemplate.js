@@ -1,57 +1,10 @@
 import { Footer, Header, Icon, Logo } from 'components';
-import Head from 'next/head';
 
-import { A, P } from '../StyledHtml';
-
-const seo = {
-  author: 'Douglas Filho',
-  title: 'IVMC',
-  canonical: 'https://ivmc.com.br',
-  description:
-    'Um lugar pra encontrar opinões fortemente embasadas e pautas nas multiplas vozes geniais da minha cabecinha.',
-  keywords:
-    'IVMC,instituto vozes da minha cabeça,instituto,vozes,da,minha,cabeça',
-  type: 'website',
-  image:
-    'https://instagram.frec5-1.fna.fbcdn.net/v/t51.2885-15/275589808_1303287863502906_3511132225815790177_n.webp?stp=dst-jpg_e35_p480x480&_nc_ht=instagram.frec5-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=fMGnqBli_YYAX9y82P7&edm=ALQROFkBAAAA&ccb=7-4&ig_cache_key=Mjc5MTAxNDgzODI0MDczMzc1OQ%3D%3D.2-ccb7-4&oh=00_AT-DjYW-rBmbcHRu2RdX_-WastcbJmC3vlRrk6Czj3kpdA&oe=6266B484&_nc_sid=30a2ef',
-  twitter: {
-    type: 'summary_large_image',
-    domain: 'ivmc.com.br',
-    author: '@douglasffilho',
-  },
-};
+import { A } from '../StyledHtml';
 
 export const PageTemplate = ({ children }) => {
   return (
     <div className="PageTemplate">
-      <Head>
-        <title>{seo.title}</title>
-        <link rel="canonical" href={seo.canonical} />
-
-        <meta name="author" content={seo.author} />
-        <meta name="description" content={seo.description} />
-        <meta name="robots" content="index, follow" />
-        <meta name="rating" content="general" />
-        <meta name="revisit-after" content="1 day" />
-        <meta name="keywords" content={seo.keywords} />
-
-        <meta property="og:locale" content="pt_BR" />
-        <meta property="og:type" content={seo.type} />
-        <meta property="og:title" content={seo.title} />
-        <meta property="og:description" content={seo.description} />
-        <meta property="og:site_name" content={seo.title} />
-        <meta property="og:url" content={seo.canonical} />
-        <meta property="og:image" content={seo.image} />
-
-        <meta name="twitter:card" content={seo.twitter.type} />
-        <meta property="twitter:domain" content={seo.twitter.domain} />
-        <meta property="twitter:url" content={seo.canonical} />
-        <meta name="twitter:site" content={seo.twitter.author} />
-        <meta name="twitter:creator" content={seo.twitter.author} />
-        <meta name="twitter:title" content={seo.title} />
-        <meta name="twitter:description" content={seo.description} />
-        <meta name="twitter:image" content={seo.image} />
-      </Head>
       <Header>
         <Logo text="IVMC" title="Instituto Vozes da Minha Cabeça" />
         <div className="remove-843" />
@@ -67,7 +20,7 @@ export const PageTemplate = ({ children }) => {
 
           <Icon
             title="Olha como me achar"
-            link="https://www.instagram.com/shadllarossine/"
+            link="https://www.twitter.com/i_v_m_c"
             openInNewTab="true"
             icon="explore"
           />
@@ -78,14 +31,6 @@ export const PageTemplate = ({ children }) => {
             openInNewTab="true"
             icon="like"
           />
-
-          <Icon
-            title="E aew"
-            link="https://www.instagram.com/shadllarossine/"
-            openInNewTab="true"
-          >
-            <P fontSize={0.5}>E aew!</P>
-          </Icon>
         </div>
       </Header>
       <main>{children}</main>
@@ -95,7 +40,7 @@ export const PageTemplate = ({ children }) => {
           openInNewTab={true}
           fontSize={0.5}
         >
-          Developed by Douglas Filho
+          Desenvolvido por Douglas Filho
         </A>
       </Footer>
       <style jsx="true">{`

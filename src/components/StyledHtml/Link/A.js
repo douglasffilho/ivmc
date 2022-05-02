@@ -3,6 +3,7 @@ export const A = ({
   linkTo = '#',
   fontSize = 1,
   openInNewTab = false,
+  color = 'black',
 }) => {
   return (
     <div>
@@ -17,6 +18,7 @@ export const A = ({
       <style jsx="true">{`
         .styled-a {
           font-size: ${fontSize}rem;
+          color: ${color};
         }
       `}</style>
     </div>
