@@ -1,7 +1,7 @@
 import { PageTemplate } from 'components';
 import Head from 'next/head';
 
-import { A } from '@/components/StyledHtml';
+import { A } from '../components/StyledHtml';
 
 const seo = {
   author: 'Douglas Filho',
